@@ -390,26 +390,28 @@
     <div class="about-grid">
       <div class="about-text">
         <p>
-          I'm a data scientist and research scientist with a Ph.D. in Physics from the University of Houston,
-          where I discovered that my real passion is using quantitative methods to understand complex human biology.
-          Since graduating in 2023, I've worked at the intersection of machine learning,
-          biostatistics, and translational research.
+          I'm a postdoctoral data scientist with a Ph.D. in Physics from the University of Houston.
+          My path from theoretical physics to biomedical research wasn't a detour — it's the reason
+          I bring a rigorous modeling mindset to problems that most biologists find intractable
+          and most computer scientists find opaque.
         </p>
         <p>
-          At the <strong>GENES:IS Lab (TIMES, UH)</strong>, I serve as a data science and ML methodologist
-          for an interdisciplinary team of psychologists, geneticists, linguists, and statisticians
-          studying cognitive and developmental outcomes in adolescents. I've built end-to-end pipelines
-          integrating MRI neuroimaging, genetic data, EEG, microbiome assays, and behavioral assessments.
+          Currently at <strong>UTHealth Houston</strong>, I serve as the team data scientist and lead analyst
+          for bioinformatics projects focused on circadian gene expression, gut microbiome, and health outcomes.
+          Concurrently, I directed an <strong>Office of Naval Research</strong>-funded study on
+          individual differences in stress response, leading multimodal collection of behavioral,
+          physiological, and cognitive performance data.
         </p>
         <p>
-          In parallel, at <strong>INAU.ai</strong>, I design data collection and ML architectures
-          for wearable biosensor research and have identified over $2.7M in funding for
-          novel AI applications in autism spectrum disorder research.
+          Before that, at the <strong>GENES:IS Lab (TIMES, UH)</strong>, I built end-to-end pipelines
+          integrating MRI neuroimaging, genomics, EEG, and behavioral assessments for an interdisciplinary
+          team of psychologists, geneticists, and linguists — and wrote proposals that put over
+          $2.7M in research funding within reach.
         </p>
         <p>
-          I thrive in collaborative, cross-disciplinary settings where I can bridge the gap
-          between domain expertise and rigorous quantitative analysis — whether advising on study design,
-          engineering features from raw biological signals, or communicating results to non-technical stakeholders.
+          I thrive at the boundary between disciplines, where I can bridge domain expertise and
+          rigorous quantitative analysis — whether designing a study, engineering features from
+          raw biological signals, or translating results for non-technical stakeholders.
         </p>
       </div>
       <div class="stat-stack">
@@ -458,16 +460,17 @@
         <h3>Brain-Imaging Genetic Analysis of Academic Skills</h3>
         <p class="proj-q">Which genetic markers shape brain development in ways that predict academic achievement?</p>
         <p>
-          Built a three-stage pipeline linking individual genetic variants to academic outcomes
-          (reading, math, comprehension) via structural MRI intermediaries — gray matter volume
-          and white matter integrity — in ~1,600 participants. Handled cross-modal imputation,
-          imaging feature engineering, and mediation analysis across three collaborating disciplines.
+          Built a three-stage pipeline linking genetic variants to academic outcomes (reading, math,
+          comprehension) via structural MRI intermediaries. A data-driven feature selection step
+          reduced the genomic feature space from ~180,000 to ~4,000 SNPs. A simulation study
+          (n = 2,000, p = 50–500k) benchmarked classifier performance. End result: 24 coding genes
+          associated with reading ability and reading-related gray matter structure identified.
         </p>
         <div class="meta-row">
-          <span class="meta-pill">N ≈ 1,600</span>
-          <span class="meta-pill">MRI + SNPs + Behavior</span>
-          <span class="meta-pill">Mediation Analysis</span>
-          <span class="meta-pill">Python / R</span>
+          <span class="meta-pill">180k → 4k SNPs</span>
+          <span class="meta-pill">24 Coding Genes</span>
+          <span class="meta-pill">MRI + Genomics</span>
+          <span class="meta-pill">Simulation Study</span>
         </div>
       </div>
 
@@ -502,15 +505,17 @@
         <h3>Detecting Generational Effects of Institutionalization via EEG</h3>
         <p class="proj-q">Can brain electrophysiology reveal the hidden developmental toll of early childhood deprivation?</p>
         <p>
-          Designed and benchmarked a comparative classification battery on EEG data to
-          distinguish children with institutional care histories from matched controls.
-          Permutation testing provided empirically derived p-values, ensuring statistically
-          rigorous evaluation beyond standard cross-validation.
+          Developed ML pipelines for small-N EEG datasets using pooled neural responses
+          to a language task. The core challenge: standard CV gives unreliable estimates
+          at small sample sizes. Applied empirical permutation-based significance testing
+          to demonstrate robust model performance (p &lt; 0.05) despite limited data —
+          a methodological contribution as much as an applied one.
         </p>
         <div class="meta-row">
-          <span class="meta-pill">EEG</span>
+          <span class="meta-pill">Small-N Methods</span>
+          <span class="meta-pill">EEG / Language Task</span>
+          <span class="meta-pill">Permutation p &lt; 0.05</span>
           <span class="meta-pill">Classifier Battery</span>
-          <span class="meta-pill">Permutation Testing</span>
         </div>
       </div>
 
@@ -523,15 +528,17 @@
         <h3>Predicting Learning Disorders from Written Text</h3>
         <p class="proj-q">What can a child's writing reveal about underlying reading and language disorders?</p>
         <p>
-          Extracted linguistic features from children's written samples and applied
-          mutual information-based feature selection to identify markers most predictive
-          of diagnosed learning disorders. Benchmarked a battery of classifiers to
-          assess generalizability across disorder subtypes.
+          Designed ML pipelines to predict learning disability status (p &lt; 0.05) on heavily
+          imbalanced datasets (25:75 ratio). Applied mutual information-based feature selection
+          for experimental NLP indices. Extended to scanned handwriting samples using
+          MobileNetV2 transfer learning, achieving AUC ~70% — demonstrating multi-modal
+          signal across both text and image modalities.
         </p>
         <div class="meta-row">
-          <span class="meta-pill">Text Feature Engineering</span>
+          <span class="meta-pill">AUC ~70% (MobileNetV2)</span>
+          <span class="meta-pill">Imbalanced Learning</span>
           <span class="meta-pill">Mutual Information FS</span>
-          <span class="meta-pill">Multi-class Classification</span>
+          <span class="meta-pill">Transfer Learning</span>
         </div>
       </div>
 
@@ -680,46 +687,90 @@
     <p class="sec-sub">Research-first roles combining rigorous methodology with real-world impact.</p>
 
     <div class="exp-list">
+
+      <div class="exp-card">
+        <div class="exp-head">
+          <span class="exp-title">Postdoctoral Fellow — Data Science</span>
+          <span class="exp-date">Sep 2025 – Present</span>
+        </div>
+        <div class="exp-org">The University of Texas Health Science Center at Houston (UTHealth Houston)</div>
+        <p class="exp-desc">Team data scientist and lead analyst for bioinformatics projects at the intersection of circadian biology, gut microbiome, and health outcomes.</p>
+        <ul class="exp-ul">
+          <li>Lead analyst for bioinformatics projects on circadian gene expression and gut microbiome</li>
+          <li>Collaborate with interdisciplinary teams to analyze complex biological datasets and develop data-driven solutions</li>
+          <li>Design and implement analytical pipelines translating multi-modal biological data into actionable research findings</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-head">
+          <span class="exp-title">Project Director</span>
+          <span class="exp-date">Oct 2024 – Sep 2025</span>
+        </div>
+        <div class="exp-org">University of Houston</div>
+        <p class="exp-desc">Directed an Office of Naval Research (ONR)-funded study on individual differences in response to stress.</p>
+        <ul class="exp-ul">
+          <li>Oversaw all data collection, processing, and analysis for a multi-day stress response study</li>
+          <li>Led a team collecting multimodal behavioral, physiological, and cognitive performance data</li>
+          <li>Managed project timeline, personnel, and deliverables for the ONR grant</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-head">
+          <span class="exp-title">Postdoctoral Fellow</span>
+          <span class="exp-date">Feb 2024 – Sep 2025</span>
+        </div>
+        <div class="exp-org">University of Houston — GENES:IS Lab, TIMES</div>
+        <p class="exp-desc">Postdoctoral research scientist in an interdisciplinary cognitive science and bioinformatics lab ($1M+ annual grant funding).</p>
+        <ul class="exp-ul">
+          <li>Designed comprehensive ML/DL pipelines on internal datasets focused on child developmental outcomes</li>
+          <li>Consulted across projects on statistical and ML methodology and study design</li>
+          <li>Contributed to grant writing to secure new research funding</li>
+        </ul>
+      </div>
+
       <div class="exp-card">
         <div class="exp-head">
           <span class="exp-title">Research Scientist</span>
-          <span class="exp-date">Sept. 2023 – Present</span>
+          <span class="exp-date">Sep 2023 – Feb 2024</span>
         </div>
         <div class="exp-org">Texas Institute for Measurement, Evaluation, and Statistics (TIMES) — University of Houston</div>
-        <p class="exp-desc">Data scientist and researcher modeling biological components of academic skill in an interdisciplinary bioinformatics and psychology lab.</p>
+        <p class="exp-desc">Data scientist modeling biological components of academic skill in the GENES:IS Lab.</p>
         <ul class="exp-ul">
-          <li>Leading initiative to warehouse 25+ years of heterogeneous, unstructured research data to enable novel downstream analysis</li>
-          <li>Serve as ML methodologist for a cross-disciplinary team spanning psychologists, geneticists, linguists, and statisticians</li>
-          <li>Designed and deployed end-to-end pipelines integrating MRI, EEG, genomic, microbiome, and behavioral data</li>
+          <li>Led initiative to warehouse 25+ years of heterogeneous, unstructured research data to enable novel analysis</li>
+          <li>Conducted novel feature selection of genetic components of academic skill (180k → 4k SNPs)</li>
+          <li>Applied data science principles to brain-imaging genetic data for interpretable results</li>
         </ul>
       </div>
 
       <div class="exp-card">
         <div class="exp-head">
-          <span class="exp-title">Grant Writer &amp; Research Scientist</span>
-          <span class="exp-date">June 2023 – Present</span>
+          <span class="exp-title">Grant Writer &amp; Researcher</span>
+          <span class="exp-date">Jul 2023 – Oct 2023</span>
         </div>
-        <div class="exp-org">INAU.ai — Houston, TX</div>
-        <p class="exp-desc">Research scientist designing novel experiments for AI product development using wearable biosensors and behavioral prediction in autism spectrum disorder.</p>
+        <div class="exp-org">INAU.AI — Remote · Part-time</div>
+        <p class="exp-desc">Research scientist supporting AI product development using wearable biosensors for autism spectrum disorder applications.</p>
         <ul class="exp-ul">
-          <li>Identified mechanisms aligned with $400K in research funding secured over a two-year timeline</li>
-          <li>Designed data collection, storage, and analysis schemes for meltdown prediction research</li>
-          <li>Writing two NIH-style grant proposals for ML applications in ASD totaling $2.3M</li>
+          <li>Collected and synthesized scientific literature aligned with INAU.ai's product development goals</li>
+          <li>Identified fundable research mechanisms; wrote two grant proposals for ML in ASD totaling $2.3M</li>
         </ul>
       </div>
 
       <div class="exp-card">
         <div class="exp-head">
-          <span class="exp-title">Graduate Researcher</span>
-          <span class="exp-date">2019 – 2023</span>
+          <span class="exp-title">Graduate Research Assistant</span>
+          <span class="exp-date">May 2019 – 2023</span>
         </div>
-        <div class="exp-org">University of Houston Genesis Labs</div>
-        <p class="exp-desc">Data scientist and physics graduate researcher combining frequentist statistics and machine learning on diverse, unstructured developmental datasets.</p>
+        <div class="exp-org">University of Houston — GENES:IS Lab</div>
+        <p class="exp-desc">ML scientist and researcher in an interdisciplinary cognitive science and bioinformatics lab with $1M+ annual grant funding.</p>
         <ul class="exp-ul">
-          <li>Consulted across internal projects on statistical methodology, ML model selection, and study design</li>
-          <li>Built ML/DL pipelines to model diverse pediatric developmental datasets and improve child outcomes</li>
+          <li>Designed ML/DL pipelines to analyze datasets focused on child developmental outcomes</li>
+          <li>Consulted on statistical and ML methodology and study design across internal projects</li>
+          <li>Wrote grant proposals to secure new research funding</li>
         </ul>
       </div>
+
     </div>
   </div>
 </section>
