@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connor Cheek, Ph.D. | Data Scientist</title>
+  <meta name="description" content="Research data scientist specializing in multimodal biological data, machine learning, and translational biomedical research.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* ─── Variables ─────────────────────────────────────────── */
+    :root {
+      --cream:      #FDFAF6;
+      --sand:       #F0EBE3;
+      --white:      #FFFFFF;
+      --text-dark:  #252525;
+      --text-mid:   #555555;
+      --text-light: #8A8A8A;
+      --terra:      #C8644C;   /* warm terracotta */
+      --terra-dark: #A84F3A;
+      --sage:       #6A9E87;
+      --shadow:     0 2px 24px rgba(0,0,0,0.07);
+      --radius:     12px;
+      --max:        1080px;
+      --serif:      'Lora', Georgia, serif;
+      --sans:       'Inter', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ─── Nav ───────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(253,250,246,0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .nav-inner {
+      max-width: var(--max); margin: 0 auto;
+      padding: 0 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+      height: 62px;
+    }
+    .nav-logo {
+      font-family: var(--serif); font-weight: 600; font-size: 1.05rem;
+      color: var(--text-dark); text-decoration: none;
+    }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav ul a {
+      font-size: 0.85rem; font-weight: 500; letter-spacing: 0.02em;
+      color: var(--text-mid); text-decoration: none;
+      transition: color 0.2s;
+    }
+    nav ul a:hover { color: var(--terra); }
+
+    /* ─── Hero ──────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding: 110px 2rem 80px;
+    }
+    .hero-inner {
+      max-width: var(--max); margin: 0 auto; width: 100%;
+      display: grid; grid-template-columns: 1fr 260px;
+      gap: 4rem; align-items: center;
+    }
+    .eyebrow {
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--terra); margin-bottom: 1rem;
+    }
+    .hero-text h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      font-weight: 700; line-height: 1.15;
+      margin-bottom: 1.2rem;
+    }
+    .hero-text .tagline {
+      font-size: 1.08rem; color: var(--text-mid);
+      max-width: 520px; line-height: 1.85; margin-bottom: 2rem;
+    }
+    .hero-text .tagline strong { color: var(--text-dark); font-weight: 600; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+    .badge {
+      font-size: 0.77rem; font-weight: 500; padding: 0.28rem 0.75rem;
+      border-radius: 100px; background: var(--sand); color: var(--text-mid);
+    }
+    .badge.hot { background: var(--terra); color: #fff; }
+    .cta-row { display: flex; gap: 0.9rem; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.72rem 1.4rem; border-radius: 8px;
+      font-size: 0.88rem; font-weight: 500; text-decoration: none;
+      border: none; cursor: pointer; transition: all 0.2s;
+    }
+    .btn-primary { background: var(--terra); color: #fff; }
+    .btn-primary:hover {
+      background: var(--terra-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(200,100,76,0.28);
+    }
+    .btn-ghost {
+      background: transparent; color: var(--text-dark);
+      border: 1.5px solid rgba(0,0,0,0.18);
+    }
+    .btn-ghost:hover { border-color: var(--text-dark); background: var(--sand); }
+
+    .hero-photo img {
+      width: 240px; height: 240px; border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--white);
+      box-shadow: 0 10px 48px rgba(0,0,0,0.13);
+    }
+
+    /* ─── Section Shell ──────────────────────────────────────── */
+    section { padding: 88px 2rem; }
+    .inner { max-width: var(--max); margin: 0 auto; }
+    .sec-label {
+      font-size: 0.74rem; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--terra); margin-bottom: 0.6rem;
+    }
+    .sec-title {
+      font-family: var(--serif);
+      font-size: clamp(1.7rem, 3vw, 2.1rem);
+      font-weight: 700; margin-bottom: 0.8rem;
+    }
+    .sec-sub {
+      font-size: 0.97rem; color: var(--text-mid);
+      max-width: 620px; line-height: 1.8; margin-bottom: 2.8rem;
+    }
+
+    /* ─── About ─────────────────────────────────────────────── */
+    .about { background: var(--sand); }
+    .about-grid {
+      display: grid; grid-template-columns: 3fr 1fr;
+      gap: 3.5rem; align-items: start;
+    }
+    .about-text p {
+      font-size: 0.99rem; color: var(--text-mid);
+      line-height: 1.9; margin-bottom: 1.2rem;
+    }
+    .about-text p:last-child { margin-bottom: 0; }
+    .about-text strong { color: var(--text-dark); font-weight: 600; }
+    .stat-stack { display: flex; flex-direction: column; gap: 1rem; }
+    .stat-card {
+      background: var(--white); border-radius: var(--radius);
+      padding: 1.4rem 1.2rem; text-align: center; box-shadow: var(--shadow);
+    }
+    .stat-n {
+      font-family: var(--serif); font-size: 2rem; font-weight: 700;
+      color: var(--terra); line-height: 1; margin-bottom: 0.25rem;
+    }
+    .stat-lbl {
+      font-size: 0.73rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--text-light);
+    }
+
+    /* ─── Projects ──────────────────────────────────────────── */
+    .proj-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 1.4rem;
+    }
+    .proj-card {
+      background: var(--white); border-radius: var(--radius);
+      padding: 1.8rem; box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,0.04);
+      display: flex; flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .proj-card:hover { transform: translateY(-3px); box-shadow: 0 10px 36px rgba(0,0,0,0.11); }
+
+    .tag-row { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.9rem; }
+    .tag {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 0.18rem 0.55rem;
+      border-radius: 4px;
+    }
+    .tag-ml      { background: #EAF5EE; color: #2A7A4F; }
+    .tag-neuro   { background: #EEF0FF; color: #5044AA; }
+    .tag-genetics{ background: #FFEEF0; color: #AA2840; }
+    .tag-eeg     { background: #FFF8E6; color: #9A6A10; }
+    .tag-nlp     { background: #E6F3FF; color: #1A5EA0; }
+    .tag-pharma  { background: #F4EEFF; color: #6A30A8; }
+    .tag-ode     { background: #EDFFF5; color: #207A40; }
+    .tag-immuno  { background: #FFF0E6; color: #A84020; }
+
+    .proj-card h3 {
+      font-family: var(--serif); font-size: 1.1rem;
+      font-weight: 600; line-height: 1.4; margin-bottom: 0.5rem;
+    }
+    .proj-q {
+      font-size: 0.87rem; font-style: italic;
+      color: var(--terra); margin-bottom: 0.75rem; line-height: 1.5;
+    }
+    .proj-card p {
+      font-size: 0.9rem; color: var(--text-mid);
+      line-height: 1.72; flex-grow: 1; margin-bottom: 1.2rem;
+    }
+    .meta-row {
+      display: flex; flex-wrap: wrap; gap: 0.4rem;
+      padding-top: 1rem; border-top: 1px solid var(--sand); margin-top: auto;
+    }
+    .meta-pill {
+      font-size: 0.75rem; padding: 0.18rem 0.55rem;
+      background: var(--cream); border-radius: 100px;
+      color: var(--text-mid); font-weight: 500;
+    }
+
+    /* ─── Skills ────────────────────────────────────────────── */
+    .skills { background: var(--sand); }
+    .skill-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.2rem;
+    }
+    .skill-cat {
+      background: var(--white); border-radius: var(--radius);
+      padding: 1.6rem; box-shadow: var(--shadow);
+    }
+    .skill-cat h3 {
+      font-size: 0.74rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--terra); margin-bottom: 0.9rem;
+    }
+    .pill-wrap { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+    .pill {
+      font-size: 0.8rem; padding: 0.25rem 0.65rem;
+      background: var(--cream); border-radius: 6px;
+      color: var(--text-mid); font-weight: 500;
+    }
+
+    /* ─── Experience ────────────────────────────────────────── */
+    .exp-list { display: flex; flex-direction: column; gap: 1.8rem; }
+    .exp-card {
+      background: var(--white); border-radius: var(--radius);
+      padding: 1.8rem; box-shadow: var(--shadow);
+      border-left: 3px solid var(--terra);
+    }
+    .exp-head {
+      display: flex; justify-content: space-between;
+      align-items: flex-start; flex-wrap: wrap; gap: 0.5rem;
+      margin-bottom: 0.3rem;
+    }
+    .exp-title { font-family: var(--serif); font-size: 1.08rem; font-weight: 600; }
+    .exp-date {
+      font-size: 0.78rem; font-weight: 500; background: var(--sand);
+      color: var(--text-light); padding: 0.18rem 0.6rem; border-radius: 4px;
+      white-space: nowrap;
+    }
+    .exp-org { font-size: 0.88rem; color: var(--sage); font-weight: 500; margin-bottom: 0.65rem; }
+    .exp-desc { font-size: 0.88rem; color: var(--text-mid); margin-bottom: 0.65rem; line-height: 1.7; }
+    .exp-ul { list-style: none; }
+    .exp-ul li {
+      font-size: 0.86rem; color: var(--text-mid); line-height: 1.65;
+      padding: 0.22rem 0 0.22rem 1.2rem; position: relative;
+    }
+    .exp-ul li::before { content: "›"; position: absolute; left: 0; color: var(--terra); font-weight: bold; }
+
+    /* ─── Education ─────────────────────────────────────────── */
+    .edu { background: var(--sand); }
+    .edu-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.2rem;
+    }
+    .edu-card {
+      background: var(--white); border-radius: var(--radius);
+      padding: 1.6rem; box-shadow: var(--shadow);
+      display: flex; align-items: flex-start; gap: 1rem;
+    }
+    .edu-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--terra), #E8845A);
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 1.1rem; flex-shrink: 0;
+    }
+    .edu-degree { font-family: var(--serif); font-size: 1rem; font-weight: 600; margin-bottom: 0.15rem; }
+    .edu-field { font-size: 0.85rem; color: var(--terra); font-weight: 500; margin-bottom: 0.15rem; }
+    .edu-school { font-size: 0.82rem; color: var(--text-light); }
+
+    /* ─── Contact ───────────────────────────────────────────── */
+    .contact { background: var(--text-dark); color: #fff; text-align: center; }
+    .contact .sec-label { color: var(--terra); }
+    .contact .sec-title { color: #fff; }
+    .contact .sec-sub { color: rgba(255,255,255,0.55); margin: 0 auto 2.5rem; }
+    .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.9rem; }
+    .contact-link {
+      display: inline-flex; align-items: center; gap: 0.55rem;
+      padding: 0.75rem 1.4rem; border-radius: 8px;
+      font-size: 0.88rem; font-weight: 500; text-decoration: none;
+      color: #fff; border: 1.5px solid rgba(255,255,255,0.18);
+      transition: all 0.2s;
+    }
+    .contact-link:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); }
+    .contact-link.primary { background: var(--terra); border-color: var(--terra); }
+    .contact-link.primary:hover { background: var(--terra-dark); border-color: var(--terra-dark); }
+
+    footer {
+      padding: 1.4rem 2rem; text-align: center;
+      background: #1A1A1A; font-size: 0.76rem; color: rgba(255,255,255,0.28);
+    }
+
+    /* ─── Responsive ────────────────────────────────────────── */
+    @media (max-width: 720px) {
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero-photo { order: -1; display: flex; justify-content: center; }
+      .hero-photo img { width: 180px; height: 180px; }
+      .badge-row, .cta-row { justify-content: center; }
+      .hero-text .tagline { margin-left: auto; margin-right: auto; }
+      .about-grid { grid-template-columns: 1fr; }
+      .stat-stack { flex-direction: row; flex-wrap: wrap; }
+      .stat-card { flex: 1; min-width: 110px; }
+      nav ul { gap: 1.2rem; }
+    }
+    @media (max-width: 480px) {
+      nav ul { display: none; }
+      section { padding: 64px 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     NAV
+════════════════════════════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#">Connor Cheek</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1>Connor Cheek,&nbsp;Ph.D.</h1>
+      <p class="tagline">
+        A <strong>research data scientist</strong> who builds machine learning pipelines
+        at the intersection of neuroscience, genetics, and public health —
+        turning messy, multi-modal biological data into answers that matter.
+      </p>
+      <div class="badge-row">
+        <span class="badge hot">Ph.D. Physics</span>
+        <span class="badge">Neuroimaging</span>
+        <span class="badge">Genomics</span>
+        <span class="badge">ML / DL</span>
+        <span class="badge">Microbiome</span>
+        <span class="badge">Pharmacokinetics</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#projects">
+          <i class="fa-solid fa-flask-vial"></i> View Projects
+        </a>
+        <a class="btn btn-ghost" href="#contact">
+          <i class="fa-solid fa-envelope"></i> Get in Touch
+        </a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/img/headshot.PNG" alt="Connor Cheek">
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════════════ -->
+<section id="about" class="about">
+  <div class="inner">
+    <p class="sec-label">Background</p>
+    <h2 class="sec-title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          I'm a data scientist and research scientist with a Ph.D. in Physics from the University of Houston,
+          where I discovered that my real passion is using quantitative methods to understand complex human biology.
+          Since graduating in 2023, I've worked at the intersection of machine learning,
+          biostatistics, and translational research.
+        </p>
+        <p>
+          At the <strong>GENES:IS Lab (TIMES, UH)</strong>, I serve as a data science and ML methodologist
+          for an interdisciplinary team of psychologists, geneticists, linguists, and statisticians
+          studying cognitive and developmental outcomes in adolescents. I've built end-to-end pipelines
+          integrating MRI neuroimaging, genetic data, EEG, microbiome assays, and behavioral assessments.
+        </p>
+        <p>
+          In parallel, at <strong>INAU.ai</strong>, I design data collection and ML architectures
+          for wearable biosensor research and have identified over $2.7M in funding for
+          novel AI applications in autism spectrum disorder research.
+        </p>
+        <p>
+          I thrive in collaborative, cross-disciplinary settings where I can bridge the gap
+          between domain expertise and rigorous quantitative analysis — whether advising on study design,
+          engineering features from raw biological signals, or communicating results to non-technical stakeholders.
+        </p>
+      </div>
+      <div class="stat-stack">
+        <div class="stat-card">
+          <div class="stat-n">6+</div>
+          <div class="stat-lbl">Active Research Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-n">$2.7M+</div>
+          <div class="stat-lbl">Funding Identified</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-n">5+</div>
+          <div class="stat-lbl">Data Modalities</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-n">Ph.D.</div>
+          <div class="stat-lbl">Physics, UH 2023</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     PROJECTS
+════════════════════════════════════════════════════════ -->
+<section id="projects">
+  <div class="inner">
+    <p class="sec-label">Research &amp; Development</p>
+    <h2 class="sec-title">Selected Projects</h2>
+    <p class="sec-sub">
+      Each project represents a complete data science lifecycle: problem framing,
+      data engineering, modeling, and interpretable results delivered to domain experts.
+    </p>
+
+    <div class="proj-grid">
+
+      <!-- 1 ── Brain-Imaging + Genetics -->
+      <div class="proj-card">
+        <div class="tag-row">
+          <span class="tag tag-neuro">Neuroimaging</span>
+          <span class="tag tag-genetics">Genomics</span>
+          <span class="tag tag-ml">ML Pipeline</span>
+        </div>
+        <h3>Brain-Imaging Genetic Analysis of Academic Skills</h3>
+        <p class="proj-q">Which genetic markers shape brain development in ways that predict academic achievement?</p>
+        <p>
+          Built a three-stage pipeline linking individual genetic variants to academic outcomes
+          (reading, math, comprehension) via structural MRI intermediaries — gray matter volume
+          and white matter integrity — in ~1,600 participants. Handled cross-modal imputation,
+          imaging feature engineering, and mediation analysis across three collaborating disciplines.
+        </p>
+        <div class="meta-row">
+          <span class="meta-pill">N ≈ 1,600</span>
+          <span class="meta-pill">MRI + SNPs + Behavior</span>
+          <span class="meta-pill">Mediation Analysis</span>
+          <span class="meta-pill">Python / R</span>
+        </div>
+      </div>
+
+      <!-- 2 ── Multimodal IQ -->
+      <div class="proj-card">
+        <div class="tag-row">
+          <span class="tag tag-neuro">Neuroimaging</span>
+          <span class="tag tag-ml">Multimodal ML</span>
+        </div>
+        <h3>Multimodal Prediction of Cognitive Ability (WISC-V)</h3>
+        <p class="proj-q">Can structural brain features reliably predict IQ across a large, diverse pediatric cohort?</p>
+        <p>
+          Developed a multimodal ML pipeline predicting Full-Scale IQ from PCA-compressed
+          gray matter and white matter features (10 + 10 components) in N = 782 children
+          from the Child Mind Institute HBN dataset. Three nested model conditions isolated
+          the relative contribution of each imaging modality.
+        </p>
+        <div class="meta-row">
+          <span class="meta-pill">N = 782</span>
+          <span class="meta-pill">WISC-V / FSIQ</span>
+          <span class="meta-pill">PCA + Nested CV</span>
+          <span class="meta-pill">CMI HBN</span>
+        </div>
+      </div>
+
+      <!-- 3 ── EEG Institutionalization -->
+      <div class="proj-card">
+        <div class="tag-row">
+          <span class="tag tag-eeg">EEG</span>
+          <span class="tag tag-ml">Classification</span>
+        </div>
+        <h3>Detecting Generational Effects of Institutionalization via EEG</h3>
+        <p class="proj-q">Can brain electrophysiology reveal the hidden developmental toll of early childhood deprivation?</p>
+        <p>
+          Designed and benchmarked a comparative classification battery on EEG data to
+          distinguish children with institutional care histories from matched controls.
+          Permutation testing provided empirically derived p-values, ensuring statistically
+          rigorous evaluation beyond standard cross-validation.
+        </p>
+        <div class="meta-row">
+          <span class="meta-pill">EEG</span>
+          <span class="meta-pill">Classifier Battery</span>
+          <span class="meta-pill">Permutation Testing</span>
+        </div>
+      </div>
+
+      <!-- 4 ── Learning Disorders from Text -->
+      <div class="proj-card">
+        <div class="tag-row">
+          <span class="tag tag-nlp">NLP</span>
+          <span class="tag tag-ml">Classification</span>
+        </div>
+        <h3>Predicting Learning Disorders from Written Text</h3>
+        <p class="proj-q">What can a child's writing reveal about underlying reading and language disorders?</p>
+        <p>
+          Extracted linguistic features from children's written samples and applied
+          mutual information-based feature selection to identify markers most predictive
+          of diagnosed learning disorders. Benchmarked a battery of classifiers to
+          assess generalizability across disorder subtypes.
+        </p>
+        <div class="meta-row">
+          <span class="meta-pill">Text Feature Engineering</span>
+          <span class="meta-pill">Mutual Information FS</span>
+          <span class="meta-pill">Multi-class Classification</span>
+        </div>
+      </div>
+
+      <!-- 5 ── PK/PD ODE -->
+      <div class="proj-card">
+        <div class="tag-row">
+          <span class="tag tag-pharma">Pharmacokinetics</span>
+          <span class="tag tag-ode">ODE Modeling</span>
+        </div>
+        <h3>Circadian PK/PD Modeling for Gemcitabine in Pancreatic Cancer</h3>
+        <p class="proj-q">Does the time of chemotherapy administration matter — and can we model why?</p>
+        <p>
+          Built an ODE-based pharmacokinetic / pharmacodynamic model incorporating
+          circadian gene expression rhythms (DCK, CDA, NT5C2) to simulate how
+          biological time-of-day alters gemcitabine efficacy across 10 pancreatic
+          cancer cell lines. Reduced model structure identified the dominant regulatory axes.
+        </p>
+        <div class="meta-row">
+          <span class="meta-pill">ODE Systems</span>
+          <span class="meta-pill">10 Cell Lines</span>
+          <span class="meta-pill">Circadian Biology</span>
+          <span class="meta-pill">PDAC</span>
+        </div>
+      </div>
+
+      <!-- 6 ── Obesity + Inflammation -->
+      <div class="proj-card">
+        <div class="tag-row">
+          <span class="tag tag-ml">Interpretable ML</span>
+          <span class="tag tag-immuno">Inflammation</span>
+        </div>
+        <h3>Adiposity, Inflammation &amp; Cytokine Dynamics</h3>
+        <p class="proj-q">How does excess adiposity dysregulate the immune system, and which cytokines drive the signal?</p>
+        <p>
+          Modeled 70 Olink protein biomarkers against adiposity and leukocyte composition
+          measures in two independent cohorts (CCHC and UTHealth). Applied quantile regression
+          to characterize distributional effects and SHAP values to rank cytokine importance
+          across adiposity strata.
+        </p>
+        <div class="meta-row">
+          <span class="meta-pill">70 Olink Cytokines</span>
+          <span class="meta-pill">Quantile Regression</span>
+          <span class="meta-pill">SHAP</span>
+          <span class="meta-pill">Two Cohorts</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     SKILLS
+════════════════════════════════════════════════════════ -->
+<section id="skills" class="skills">
+  <div class="inner">
+    <p class="sec-label">Technical Toolkit</p>
+    <h2 class="sec-title">Skills &amp; Methods</h2>
+    <p class="sec-sub">Applied across neuroimaging, genomics, microbiome science, and pharmacology.</p>
+
+    <div class="skill-grid">
+      <div class="skill-cat">
+        <h3>Languages &amp; Environments</h3>
+        <div class="pill-wrap">
+          <span class="pill">Python</span>
+          <span class="pill">R</span>
+          <span class="pill">MATLAB</span>
+          <span class="pill">SQL</span>
+          <span class="pill">Bash</span>
+          <span class="pill">SLURM / HPC</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <h3>Machine Learning</h3>
+        <div class="pill-wrap">
+          <span class="pill">scikit-learn</span>
+          <span class="pill">XGBoost</span>
+          <span class="pill">PyTorch</span>
+          <span class="pill">SHAP</span>
+          <span class="pill">Nested CV</span>
+          <span class="pill">Feature Selection</span>
+          <span class="pill">Ensemble Methods</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <h3>Statistics &amp; Modeling</h3>
+        <div class="pill-wrap">
+          <span class="pill">Mixed Effects Models</span>
+          <span class="pill">Quantile Regression</span>
+          <span class="pill">Mediation Analysis</span>
+          <span class="pill">Permutation Testing</span>
+          <span class="pill">Bayesian Inference</span>
+          <span class="pill">ODE Systems</span>
+          <span class="pill">PCA / Factor Analysis</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <h3>Domain &amp; Data Types</h3>
+        <div class="pill-wrap">
+          <span class="pill">Structural MRI</span>
+          <span class="pill">EEG</span>
+          <span class="pill">Genomics / SNPs</span>
+          <span class="pill">Proteomics (Olink)</span>
+          <span class="pill">Metabolomics</span>
+          <span class="pill">Microbiome (16S)</span>
+          <span class="pill">Wearable Biosensors</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <h3>Data Engineering</h3>
+        <div class="pill-wrap">
+          <span class="pill">pandas / polars</span>
+          <span class="pill">NumPy / SciPy</span>
+          <span class="pill">ETL Pipelines</span>
+          <span class="pill">Multi-modal Imputation</span>
+          <span class="pill">Data Warehousing</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <h3>Visualization &amp; Communication</h3>
+        <div class="pill-wrap">
+          <span class="pill">matplotlib</span>
+          <span class="pill">seaborn</span>
+          <span class="pill">ggplot2</span>
+          <span class="pill">Plotly</span>
+          <span class="pill">Grant Writing</span>
+          <span class="pill">Technical Reporting</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     EXPERIENCE
+════════════════════════════════════════════════════════ -->
+<section id="experience">
+  <div class="inner">
+    <p class="sec-label">Career</p>
+    <h2 class="sec-title">Experience</h2>
+    <p class="sec-sub">Research-first roles combining rigorous methodology with real-world impact.</p>
+
+    <div class="exp-list">
+      <div class="exp-card">
+        <div class="exp-head">
+          <span class="exp-title">Research Scientist</span>
+          <span class="exp-date">Sept. 2023 – Present</span>
+        </div>
+        <div class="exp-org">Texas Institute for Measurement, Evaluation, and Statistics (TIMES) — University of Houston</div>
+        <p class="exp-desc">Data scientist and researcher modeling biological components of academic skill in an interdisciplinary bioinformatics and psychology lab.</p>
+        <ul class="exp-ul">
+          <li>Leading initiative to warehouse 25+ years of heterogeneous, unstructured research data to enable novel downstream analysis</li>
+          <li>Serve as ML methodologist for a cross-disciplinary team spanning psychologists, geneticists, linguists, and statisticians</li>
+          <li>Designed and deployed end-to-end pipelines integrating MRI, EEG, genomic, microbiome, and behavioral data</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-head">
+          <span class="exp-title">Grant Writer &amp; Research Scientist</span>
+          <span class="exp-date">June 2023 – Present</span>
+        </div>
+        <div class="exp-org">INAU.ai — Houston, TX</div>
+        <p class="exp-desc">Research scientist designing novel experiments for AI product development using wearable biosensors and behavioral prediction in autism spectrum disorder.</p>
+        <ul class="exp-ul">
+          <li>Identified mechanisms aligned with $400K in research funding secured over a two-year timeline</li>
+          <li>Designed data collection, storage, and analysis schemes for meltdown prediction research</li>
+          <li>Writing two NIH-style grant proposals for ML applications in ASD totaling $2.3M</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-head">
+          <span class="exp-title">Graduate Researcher</span>
+          <span class="exp-date">2019 – 2023</span>
+        </div>
+        <div class="exp-org">University of Houston Genesis Labs</div>
+        <p class="exp-desc">Data scientist and physics graduate researcher combining frequentist statistics and machine learning on diverse, unstructured developmental datasets.</p>
+        <ul class="exp-ul">
+          <li>Consulted across internal projects on statistical methodology, ML model selection, and study design</li>
+          <li>Built ML/DL pipelines to model diverse pediatric developmental datasets and improve child outcomes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     EDUCATION
+════════════════════════════════════════════════════════ -->
+<section class="edu">
+  <div class="inner">
+    <p class="sec-label">Education</p>
+    <h2 class="sec-title">Academic Background</h2>
+    <div class="edu-grid" style="margin-top: 2rem;">
+      <div class="edu-card">
+        <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div>
+          <div class="edu-degree">Doctor of Philosophy</div>
+          <div class="edu-field">Physics</div>
+          <div class="edu-school">University of Houston &nbsp;·&nbsp; August 2023</div>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div>
+          <div class="edu-degree">Bachelor of Science</div>
+          <div class="edu-field">Physics</div>
+          <div class="edu-school">University of Science &amp; Arts of Oklahoma &nbsp;·&nbsp; May 2017</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════════════════ -->
+<section id="contact" class="contact">
+  <div class="inner">
+    <p class="sec-label">Let's Connect</p>
+    <h2 class="sec-title">Get in Touch</h2>
+    <p class="sec-sub">
+      I'm open to research scientist, data scientist, and consulting roles —
+      especially in biomedical, health tech, and applied ML spaces. Let's talk.
+    </p>
+    <div class="contact-links">
+      <a class="contact-link primary" href="mailto:connorcheek93@gmail.com">
+        <i class="fa-solid fa-envelope"></i> connorcheek93@gmail.com
+      </a>
+      <a class="contact-link" href="https://github.com/CheekyCheek" target="_blank" rel="noopener">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+      <a class="contact-link" href="https://www.linkedin.com/in/connor-l-cheek/" target="_blank" rel="noopener">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Connor Cheek, Ph.D. &nbsp;·&nbsp; Data Scientist &nbsp;·&nbsp; Houston, TX</p>
+</footer>
+
+</body>
+</html>
