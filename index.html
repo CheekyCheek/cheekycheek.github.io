@@ -194,6 +194,7 @@
     .tag-pharma  { background: #F4EEFF; color: #6A30A8; }
     .tag-ode     { background: #EDFFF5; color: #207A40; }
     .tag-immuno  { background: #FFF0E6; color: #A84020; }
+    .tag-microbiome { background: #E6FBF5; color: #0F7A63; }
 
     .proj-card h3 {
       font-family: var(--serif); font-size: 1.1rem;
@@ -414,7 +415,7 @@
       </div>
       <div class="stat-stack">
         <div class="stat-card">
-          <div class="stat-n">6+</div>
+          <div class="stat-n">8+</div>
           <div class="stat-lbl">Active Research Projects</div>
         </div>
         <div class="stat-card">
@@ -576,6 +577,54 @@
           <span class="meta-pill">Quantile Regression</span>
           <span class="meta-pill">SHAP</span>
           <span class="meta-pill">Two Cohorts</span>
+        </div>
+      </div>
+
+      <!-- 7 ── Gut-Brain-Alcohol -->
+      <div class="proj-card">
+        <div class="tag-row">
+          <span class="tag tag-microbiome">Microbiome</span>
+          <span class="tag tag-neuro">Cognitive Aging</span>
+          <span class="tag tag-ml">Mediation Analysis</span>
+        </div>
+        <h3>Alcohol, Gut Microbiome &amp; Cognitive Trajectories in Older Adults</h3>
+        <p class="proj-q">Does alcohol's effect on specific gut bacteria help explain who maintains cognitive function with age?</p>
+        <p>
+          Analyzed a 4-visit, 3-year longitudinal RCT cohort (MIND diet + caloric restriction, N ≈ 210)
+          combining shotgun metagenomics, serial cognitive testing, and AD biomarkers. Identified three
+          independent, FDR-significant signals — alcohol suppressing a key SCFA-producing genus,
+          baseline SCFA producers predicting 3-year cognitive trajectory, and a mediation pathway from
+          alcohol through gut microbiota to perceptual-speed decline — all robust to diet-arm and
+          temporal confounding checks.
+        </p>
+        <div class="meta-row">
+          <span class="meta-pill">N ≈ 210</span>
+          <span class="meta-pill">Shotgun Metagenomics</span>
+          <span class="meta-pill">3-Year Longitudinal LME</span>
+          <span class="meta-pill">Mediation Analysis</span>
+        </div>
+      </div>
+
+      <!-- 8 ── ApoE4 x Alcohol -->
+      <div class="proj-card">
+        <div class="tag-row">
+          <span class="tag tag-genetics">Genomics</span>
+          <span class="tag tag-immuno">Neurodegeneration Biomarkers</span>
+          <span class="tag tag-ml">Interaction Modeling</span>
+        </div>
+        <h3>ApoE4 Genotype Moderates Alcohol's Effect on Neurodegeneration Biomarkers</h3>
+        <p class="proj-q">Does genetic risk for Alzheimer's disease change how alcohol use affects the brain?</p>
+        <p>
+          Tested whether ApoE4 carrier status moderates the relationship between alcohol use (AUDIT)
+          and plasma neurodegeneration markers in a Mexican-American cohort (N = 782). Found a null
+          population-wide main effect masking a significant ApoE4 × AUDIT interaction on NF-L and
+          Aβ40, with the effect acting directly rather than through neuroinflammatory mediation.
+        </p>
+        <div class="meta-row">
+          <span class="meta-pill">N = 782</span>
+          <span class="meta-pill">CCHC Cohort</span>
+          <span class="meta-pill">ApoE4 × AUDIT Interaction</span>
+          <span class="meta-pill">Plasma Biomarkers</span>
         </div>
       </div>
 
