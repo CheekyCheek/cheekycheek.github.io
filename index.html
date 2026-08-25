@@ -201,6 +201,11 @@
     }
     .about-text p:last-child { margin-bottom: 0; }
     .about-text strong { color: var(--text-dark); font-weight: 600; }
+    .about-text a {
+      color: var(--terra); font-weight: 600; text-decoration: none;
+      border-bottom: 1px solid rgba(200,100,76,0.35); transition: border-color 0.2s;
+    }
+    .about-text a:hover { border-color: var(--terra); }
     .stat-stack { display: flex; flex-direction: column; gap: 1rem; }
     .stat-card {
       background: var(--white); border-radius: var(--radius);
@@ -441,27 +446,33 @@
       <div class="about-text">
         <p>
           I'm a postdoctoral data scientist with a Ph.D. in Physics from the University of Houston.
-          My path from theoretical physics to biomedical research wasn't a detour — it's the reason
+          My path from theoretical physics to biomedical research wasn't a detour: it's the reason
           I bring a rigorous modeling mindset to problems that most biologists find intractable
           and most computer scientists find opaque.
         </p>
         <p>
-          Currently at <strong>UTHealth Houston</strong>, I serve as the team data scientist and lead analyst
-          for bioinformatics projects focused on circadian gene expression, gut microbiome, and health outcomes.
-          Concurrently, I directed an <strong>Office of Naval Research</strong>-funded study on
+          Currently at <strong>UTHealth Houston</strong>, I'm the team data scientist and lead analyst
+          for bioinformatics projects spanning circadian gene expression, gut microbiome science, and
+          cardiometabolic health outcomes. Recent work includes identifying
+          <a href="#proj-gut-signals">49 serum metabolites carrying a statistically robust signature
+          of gut microbial activity</a>, and tracing a mediation pathway from alcohol use through gut
+          bacteria to cognitive decline in a three-year longitudinal cohort.
+        </p>
+        <p>
+          Previously, I directed an <strong>Office of Naval Research</strong>-funded study on
           individual differences in stress response, leading multimodal collection of behavioral,
-          physiological, and cognitive performance data.
+          physiological, and cognitive performance data. Before that, at the
+          <strong>GENES:IS Lab (TIMES, UH)</strong>, I built end-to-end pipelines integrating MRI
+          neuroimaging, genomics, EEG, and behavioral assessments for an interdisciplinary team of
+          psychologists, geneticists, and linguists. That work surfaced
+          <a href="#proj-apoe4">a genetic interaction between ApoE4 carrier status and alcohol use
+          on neurodegeneration biomarkers</a> and helped secure proposals for over $2.7M in
+          research funding.
         </p>
         <p>
-          Before that, at the <strong>GENES:IS Lab (TIMES, UH)</strong>, I built end-to-end pipelines
-          integrating MRI neuroimaging, genomics, EEG, and behavioral assessments for an interdisciplinary
-          team of psychologists, geneticists, and linguists — and wrote proposals that put over
-          $2.7M in research funding within reach.
-        </p>
-        <p>
-          I thrive at the boundary between disciplines, where I can bridge domain expertise and
-          rigorous quantitative analysis — whether designing a study, engineering features from
-          raw biological signals, or translating results for non-technical stakeholders.
+          I thrive at the boundary between disciplines, bridging domain expertise and rigorous
+          quantitative analysis: designing a study, engineering features from raw biological
+          signals, or translating results for non-technical stakeholders.
         </p>
       </div>
       <div class="stat-stack">
@@ -662,7 +673,7 @@
       </div>
 
       <!-- 8 ── ApoE4 x Alcohol -->
-      <div class="proj-card">
+      <div class="proj-card" id="proj-apoe4">
         <div class="tag-row">
           <span class="tag tag-genetics">Genomics</span>
           <span class="tag tag-immuno">Neurodegeneration Biomarkers</span>
@@ -685,7 +696,7 @@
       </div>
 
       <!-- 9 ── Gut Signals -->
-      <div class="proj-card">
+      <div class="proj-card" id="proj-gut-signals">
         <div class="tag-row">
           <span class="tag tag-microbiome">Microbiome</span>
           <span class="tag tag-ml">Elastic Net / Stability Selection</span>
