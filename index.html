@@ -455,8 +455,9 @@
           for bioinformatics projects spanning circadian gene expression, gut microbiome science, and
           cardiometabolic health outcomes. Recent work includes identifying
           <a href="#proj-gut-signals">49 serum metabolites carrying a statistically robust signature
-          of gut microbial activity</a>, tracing a mediation pathway from alcohol use through gut
-          bacteria to cognitive decline in a three-year longitudinal cohort, and modeling
+          of gut microbial activity</a>, using panel-data methods to show that alcohol's reported
+          <a href="#proj-rsa">"protective" effect on cognition in older adults reflects confounding
+          rather than causation</a>, and modeling
           <a href="#proj-obesity-inflammation">how adiposity and glycemic status reshape cytokine
           signaling across two independent cohorts</a>.
         </p>
@@ -647,28 +648,30 @@
         </div>
       </div>
 
-      <!-- 7 ── Gut-Brain-Alcohol -->
-      <div class="proj-card">
+      <!-- 7 ── Gut-Brain-Alcohol (RSA) -->
+      <div class="proj-card" id="proj-rsa">
         <div class="tag-row">
           <span class="tag tag-microbiome">Microbiome</span>
           <span class="tag tag-neuro">Cognitive Aging</span>
-          <span class="tag tag-ml">Mediation Analysis</span>
+          <span class="tag tag-ml">Causal Inference</span>
         </div>
-        <h3>Alcohol, Gut Microbiome &amp; Cognitive Trajectories in Older Adults</h3>
-        <p class="proj-q">Does alcohol's effect on specific gut bacteria help explain who maintains cognitive function with age?</p>
+        <h3>Confounding, Not Causation: Reassessing Alcohol's "Protective" Effect on Cognition</h3>
+        <p class="proj-q">Does light-to-moderate alcohol use really protect cognition in older adults, or does that association just reflect who tends to drink?</p>
         <p>
-          Analyzed a 4-visit, 3-year longitudinal RCT cohort (MIND diet + caloric restriction, N ≈ 210)
-          combining shotgun metagenomics, serial cognitive testing, and AD biomarkers. Identified three
-          independent, FDR-significant signals — alcohol suppressing a key SCFA-producing genus,
-          baseline SCFA producers predicting 3-year cognitive trajectory, and a mediation pathway from
-          alcohol through gut microbiota to perceptual-speed decline — all robust to diet-arm and
-          temporal confounding checks.
+          Used person-centered Mundlak decomposition to separate within-person (visit-to-visit) from
+          between-person (habitual) alcohol associations across five cognitive domains, six plasma
+          neurodegeneration biomarkers, gut microbiome composition (alpha/beta diversity plus an
+          agnostic 678-genus sweep), and serum LBP (a gut-barrier integrity marker) in 197 older adults
+          followed for three years. Found no consistent association across any outcome domain,
+          replicated across two independent alcohol-exposure measures (FFQ and AUDIT-10) and an
+          abstainer-versus-drinker comparison, indicating the widely reported "protective" effect
+          likely reflects confounding rather than a causal relationship.
         </p>
         <div class="meta-row">
-          <span class="meta-pill">N ≈ 210</span>
-          <span class="meta-pill">Shotgun Metagenomics</span>
-          <span class="meta-pill">3-Year Longitudinal LME</span>
-          <span class="meta-pill">Mediation Analysis</span>
+          <span class="meta-pill">N = 197</span>
+          <span class="meta-pill">Mundlak Decomposition</span>
+          <span class="meta-pill">678-Genus Sweep</span>
+          <span class="meta-pill">3-Year Longitudinal</span>
         </div>
       </div>
 
