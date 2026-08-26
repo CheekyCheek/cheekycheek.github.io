@@ -341,6 +341,21 @@
     .edu-field { font-size: 0.85rem; color: var(--terra); font-weight: 500; margin-bottom: 0.15rem; }
     .edu-school { font-size: 0.82rem; color: var(--text-light); }
 
+    /* ─── Publications ──────────────────────────────────────── */
+    .pub-list { display: flex; flex-direction: column; gap: 1.1rem; }
+    .pub-item {
+      background: var(--white); border-radius: var(--radius);
+      padding: 1.3rem 1.6rem; box-shadow: var(--shadow);
+      border-left: 3px solid var(--sage);
+    }
+    .pub-title {
+      font-family: var(--serif); font-weight: 600; font-size: 1rem;
+      line-height: 1.5; margin-bottom: 0.4rem;
+    }
+    .pub-authors { font-size: 0.87rem; color: var(--text-mid); margin-bottom: 0.2rem; }
+    .pub-authors strong { color: var(--text-dark); font-weight: 600; }
+    .pub-venue { font-size: 0.83rem; color: var(--text-light); font-style: italic; }
+
     /* ─── Contact ───────────────────────────────────────────── */
     .contact { background: var(--text-dark); color: #fff; text-align: center; }
     .contact .sec-label { color: var(--terra); }
@@ -802,7 +817,7 @@
           <span class="pill">Mediation Analysis</span>
           <span class="pill">Interaction / Moderation Analysis</span>
           <span class="pill">Permutation Testing</span>
-          <span class="pill">Bayesian Inference</span>
+          <span class="pill">Multivariate Statistical Simulation</span>
           <span class="pill">ODE Systems</span>
           <span class="pill">PCA / Factor Analysis</span>
           <span class="pill">Survival Analysis (Cox Models)</span>
@@ -979,6 +994,72 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════
+     PUBLICATIONS
+════════════════════════════════════════════════════════ -->
+<section id="publications">
+  <div class="inner">
+    <p class="sec-label">Research Output</p>
+    <h2 class="sec-title">Publications</h2>
+    <p class="sec-sub">
+      Peer-reviewed work spanning quantitative methodology, neuroimaging genetics, and learning
+      disabilities. Full list on
+      <a href="https://scholar.google.com/citations?user=6v9SK34AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.
+    </p>
+    <div class="pub-list">
+
+      <div class="pub-item">
+        <div class="pub-title">Identification and Classification of Learning Disabilities Using Machine Learning Approaches: A Meta-Analysis</div>
+        <div class="pub-authors">Ahmed, Y., Chinn, L. K., <strong>Cheek, C. L.</strong>, Francis, D. J., &amp; Grigorenko, E. L.</div>
+        <div class="pub-venue">Mind, Brain, and Education (2026)</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Impact of Maternal Institutionalization on Children's Language Development: A Multidisciplinary Study</div>
+        <div class="pub-authors">Zhukova, M. A., Chinn, L. K., <strong>Cheek, C.</strong>, Sukmanova, A. A., Kustova, T. A., et al.</div>
+        <div class="pub-venue">Journal of Experimental Child Psychology (2025)</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Neuroimaging Genetics and Developmental Psychopathology: A Systematic Review</div>
+        <div class="pub-authors"><strong>Cheek, C. L.</strong>, Dobrynin, P. V., Khafizova, G. V., Koirala, N., Mahaffy, K., et al.</div>
+        <div class="pub-venue">Development and Psychopathology (2025)</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Statistical and Machine Learning Analysis in Brain-Imaging Genetics: A Review of Methods</div>
+        <div class="pub-authors"><strong>Cheek, C. L.</strong>, Lindner, P., &amp; Grigorenko, E. L.</div>
+        <div class="pub-venue">Behavior Genetics (2024)</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">The Exceptionality of Twice-Exceptionality: Examining Combined Prevalence of Giftedness and Disability Using Multivariate Statistical Simulation</div>
+        <div class="pub-authors"><strong>Cheek, C. L.</strong>* &amp; Garcia, J. L.*, Mehta, P. D., Francis, D. J., &amp; Grigorenko, E. L. (*co-first authors)</div>
+        <div class="pub-venue">Exceptional Children, 90(1), 43&ndash;56 (2023)</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Exploring the Machine Learning Paradigm in Determining Risk for Reading Disability</div>
+        <div class="pub-authors">Erbeli, F., He, K., <strong>Cheek, C.</strong>, Rice, M., &amp; Qian, X.</div>
+        <div class="pub-venue">Scientific Studies of Reading (2023)</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Methodological Contributions in Brain-Imaging Genetics: A Review, Simulation Study, and Experimental Analysis</div>
+        <div class="pub-authors"><strong>Cheek, C. L.</strong></div>
+        <div class="pub-venue">Doctoral Dissertation, University of Houston (2023)</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Individual Differences in Word-Level Skills and Paragraph Reading Comprehension in a (Semi-)Transparent Orthography</div>
+        <div class="pub-authors">Logvinenko, T., <strong>Cheek, C.</strong>, Khalaf, S., Prikhoda, N., Zhukova, M. A., et al.</div>
+        <div class="pub-venue">Learning Disability Quarterly (2021)</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
      CONTACT
 ════════════════════════════════════════════════════════ -->
 <section id="contact" class="contact">
@@ -992,6 +1073,9 @@
     <div class="contact-links">
       <a class="contact-link primary" href="mailto:connorcheek93@gmail.com">
         <i class="fa-solid fa-envelope"></i> connorcheek93@gmail.com
+      </a>
+      <a class="contact-link" href="https://scholar.google.com/citations?user=6v9SK34AAAAJ&hl=en" target="_blank" rel="noopener">
+        <i class="fa-solid fa-graduation-cap"></i> Google Scholar
       </a>
       <a class="contact-link" href="https://github.com/CheekyCheek" target="_blank" rel="noopener">
         <i class="fa-brands fa-github"></i> GitHub
