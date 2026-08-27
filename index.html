@@ -471,7 +471,7 @@
           Currently at <strong>UTHealth Houston</strong>, I'm the team data scientist and lead analyst
           for bioinformatics projects spanning circadian gene expression, gut microbiome science, and
           cardiometabolic health outcomes. Recent work includes identifying
-          <a href="#proj-gut-signals">49 serum metabolites carrying a statistically robust signature
+          <a href="#proj-gut-signals">41 serum metabolites carrying a statistically robust signature
           of gut microbial activity</a>, using panel-data methods to show that alcohol's reported
           <a href="#proj-rsa">"protective" effect on cognition in older adults reflects confounding
           rather than causation</a>, and modeling
@@ -743,17 +743,21 @@
           <span class="tag tag-immuno">Metabolomics</span>
           <span class="tag tag-nlp">API Integration</span>
           <span class="tag tag-pharma">High-Performance Computing</span>
+          <span class="tag tag-neuro">LLM Agents</span>
         </div>
         <h3>Serum Metabolomic Signatures of the Gut Microbiome</h3>
         <p class="proj-q">Which circulating metabolites actually carry a fingerprint of gut microbial activity — and how much of their variance is uniquely explained by it?</p>
         <p>
           Built an elastic-net regression pipeline with bootstrapped stability selection (100
-          resamples) across a 12-covariate adjustment model, run at HPC scale on TACC, to link
-          gut microbial features to circulating serum metabolites. Identified 49 FDR-significant
-          metabolites, with xenobiotic and xanthine metabolism pathways most strongly enriched.
-          A four-component variance-partitioning framework then decomposed how much of each
-          metabolite's variance is uniquely attributable to the microbiome, cross-validated
-          against an independent SHAP-based sensitivity analysis.
+          resamples) across a 12-covariate, network-balanced adjustment model, run at HPC scale
+          on TACC, to link gut microbial features to circulating serum metabolites. Identified 41
+          FDR-significant metabolites, with xanthine metabolism (caffeine-derived compounds like
+          theophylline and paraxanthine) prominent among the named hits. A four-component
+          variance-partitioning framework decomposed how much of each metabolite's variance is
+          uniquely attributable to the microbiome, cross-validated against an independent
+          SHAP-based sensitivity analysis. Also built a small literature-screening agent that
+          searches PubMed per significant target and uses an LLM to judge actual relevance,
+          adaptively broadening its query when initial results come back too thin.
         </p>
         <div class="meta-row">
           <span class="meta-pill">Bootstrapped Stability Selection</span>
@@ -762,6 +766,7 @@
           <span class="meta-pill">HPC-Scale Model Training</span>
           <span class="meta-pill">Mediation Analysis</span>
           <span class="meta-pill">SHAP Feature Analysis</span>
+          <span class="meta-pill">LLM-Based Literature Screening</span>
         </div>
       </div>
 
