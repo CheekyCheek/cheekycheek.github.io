@@ -541,7 +541,7 @@
         <h3>Brain-Imaging Genetic Analysis of Academic Skills</h3>
         <p class="proj-q">Which genetic markers shape brain development in ways that predict academic achievement?</p>
         <p>
-          Built a three-stage pipeline linking genetic variants to academic outcomes (reading, math,
+          Engineered a three-stage pipeline linking genetic variants to academic outcomes (reading, math,
           comprehension) via structural MRI intermediaries. A data-driven feature selection step
           reduced the genomic feature space from ~180,000 to ~4,000 SNPs. A simulation study
           (n = 2,000, p = 50–500k) benchmarked classifier performance. End result: 24 coding genes
@@ -617,7 +617,7 @@
         <h3>Predicting Learning Disorders from Written Text</h3>
         <p class="proj-q">What can a child's writing reveal about underlying reading and language disorders?</p>
         <p>
-          Designed ML pipelines to predict learning disability status (p &lt; 0.05) on heavily
+          Devised ML pipelines to predict learning disability status (p &lt; 0.05) on heavily
           imbalanced datasets (25:75 ratio). Applied mutual information-based feature selection
           for experimental NLP indices. Extended to scanned handwriting samples using
           MobileNetV2 transfer learning, achieving AUC ~70% — demonstrating multi-modal
@@ -643,7 +643,7 @@
         <h3>Circadian PK/PD Modeling for Gemcitabine in Pancreatic Cancer</h3>
         <p class="proj-q">Does the time of chemotherapy administration matter — and can we model why?</p>
         <p>
-          Built an ODE-based pharmacokinetic / pharmacodynamic model incorporating
+          Formulated an ODE-based pharmacokinetic / pharmacodynamic model incorporating
           circadian gene expression rhythms (DCK, CDA, NT5C2) to simulate how
           biological time-of-day alters gemcitabine efficacy across 10 pancreatic
           cancer cell lines. Reduced model structure identified the dominant regulatory axes.
@@ -749,7 +749,7 @@
         <h3>Serum Metabolomic Signatures of the Gut Microbiome</h3>
         <p class="proj-q">Which circulating metabolites actually carry a fingerprint of gut microbial activity — and how much of their variance is uniquely explained by it?</p>
         <p>
-          Built an elastic-net regression pipeline with bootstrapped stability selection (100
+          Constructed an elastic-net regression pipeline with bootstrapped stability selection (100
           resamples) across a 12-covariate, network-balanced adjustment model, run at HPC scale
           on TACC, to link gut microbial features to circulating serum metabolites. Identified 41
           FDR-significant metabolites, with xanthine metabolism (caffeine-derived compounds like
@@ -929,10 +929,10 @@
         <p class="exp-desc">Lead analyst across bioinformatics research lines spanning inflammation, gut microbiome, circadian biology, and biological aging, working independently across multiple clinical research groups.</p>
         <ul class="exp-ul">
           <li>Applied unsupervised clustering to inflammatory cytokine data and surfaced a previously unrecognized "allergic obesity" patient subtype, invisible to BMI-based screening alone</li>
-          <li>Built a multi-omics ML framework linking gut microbial features to circulating serum metabolites, using bootstrapped stability selection and cross-validated ElasticNet across a 12-covariate adjustment model at HPC scale to identify 41 FDR-significant metabolites</li>
-          <li>Built a lightweight LLM-based literature-screening agent that searches PubMed for each significant biomarker and adaptively broadens its own query when initial results come back too thin, automating what had been a manual literature-triage step</li>
-          <li>Built an ODE-based simulation model linking circadian biology to drug sensitivity across cancer cell lines from time-series RNA-seq data, giving collaborators a quantitative tool to prioritize treatment-timing hypotheses</li>
-          <li>Benchmarked nine published circadian phase-estimation algorithms across six independent datasets, then built a novel circadian rigidity score from the winning algorithm that independently predicts incident heart attack (HR = 2.02) and cardiovascular disease (HR = 1.59) years in advance in a large community cohort</li>
+          <li>Constructed a multi-omics ML framework linking gut microbial features to circulating serum metabolites, using bootstrapped stability selection and cross-validated ElasticNet across a 12-covariate adjustment model at HPC scale to identify 41 FDR-significant metabolites</li>
+          <li>Created a lightweight LLM-based literature-screening agent that searches PubMed for each significant biomarker and adaptively broadens its own query when initial results come back too thin, automating what had been a manual literature-triage step</li>
+          <li>Formulated an ODE-based simulation model linking circadian biology to drug sensitivity across cancer cell lines from time-series RNA-seq data, giving collaborators a quantitative tool to prioritize treatment-timing hypotheses</li>
+          <li>Benchmarked nine published circadian phase-estimation algorithms across six independent datasets, then derived a novel circadian rigidity score from the winning algorithm that independently predicts incident heart attack (HR = 2.02) and cardiovascular disease (HR = 1.59) years in advance in a large community cohort</li>
           <li>Ran a large-scale plasma biomarker sweep resolving a null population-level alcohol effect into a gene-specific risk: carriers of a common Alzheimer's-risk gene (ApoE4) who drink show elevated neurodegeneration biomarkers</li>
           <li>Applied person-centered panel decomposition to alcohol, gut-microbiome, and cognition data in a 3-year longitudinal cohort, finding that the widely reported "protective" alcohol-cognition association does not hold up and likely reflects confounding rather than causation</li>
           <li>Functions as analytical gatekeeper for several exploratory clinical research lines (glycomics, gut-barrier integrity, biological aging), with the PI's decision to advance or shelve each line resting directly on these results</li>
@@ -948,7 +948,7 @@
         <div class="exp-org">University of Houston — GENES:IS Lab, TIMES</div>
         <p class="exp-desc">Applied ML to multi-modal data (genetic, structural MRI, wearable biosensor) to model behavioral outcomes, independently owning research questions from data collection through peer-reviewed publication.</p>
         <ul class="exp-ul">
-          <li>Built a multimodal ML pipeline combining white- and gray-matter neuroimaging features (PCA-reduced) to predict full-scale IQ in a large pediatric neuroimaging cohort, using nested model comparisons to test whether imaging data earns its cost over demographic-only prediction</li>
+          <li>Assembled a multimodal ML pipeline combining white- and gray-matter neuroimaging features (PCA-reduced) to predict full-scale IQ in a large pediatric neuroimaging cohort, using nested model comparisons to test whether imaging data earns its cost over demographic-only prediction</li>
           <li>Benchmarked that model against polygenic risk scores from the PGS Catalog to quantify how much of IQ's known genetic signal the imaging model actually captures</li>
           <li>Mentored 9 graduate researchers on study design, statistical methodology, and ML implementation</li>
           <li><strong>Project Director, ONR-funded study, "Individual Differences in Response to Stress"</strong> (Oct 2024 – 2025): owned data collection, processing, and analysis for a multi-day, multi-instrument stress-response study end-to-end</li>
@@ -962,7 +962,7 @@
         </div>
         <div class="exp-org">Texas Institute for Measurement, Evaluation, and Statistics (TIMES) — University of Houston</div>
         <ul class="exp-ul">
-          <li>Designed a lab-wide data-warehousing structure in collaboration with the IT team to consolidate 25+ years of unstructured, heterogeneous research data, then directed graduate students as they migrated their own data into it and reviewed each import for correctness; the structure is still the lab's standard years after handing it off</li>
+          <li>Architected a lab-wide data-warehousing structure in collaboration with the IT team to consolidate 25+ years of unstructured, heterogeneous research data, then directed graduate students as they migrated their own data into it and reviewed each import for correctness; the structure is still the lab's standard years after handing it off</li>
         </ul>
       </div>
 
@@ -973,7 +973,7 @@
         </div>
         <div class="exp-org">INAU.ai</div>
         <ul class="exp-ul">
-          <li>Designed data collection, storage, and analysis pipelines for wearable biosensor research aimed at predicting autism-related meltdown events early enough for caregivers to intervene</li>
+          <li>Established data collection, storage, and analysis pipelines for wearable biosensor research aimed at predicting autism-related meltdown events early enough for caregivers to intervene</li>
           <li>Authored technical sections of ML-focused grant proposals, contributing to $2.3M in cumulative submitted funding requests</li>
         </ul>
       </div>
@@ -985,7 +985,7 @@
         </div>
         <div class="exp-org">University of Houston — GENES:IS Lab</div>
         <ul class="exp-ul">
-          <li>Built a feature-selection pipeline that cut 50K–500K candidate brain-imaging and genomic features down to a validated predictive subset explaining up to 20% of variance in cognitive outcomes</li>
+          <li>Implemented a feature-selection pipeline that cut 50K–500K candidate brain-imaging and genomic features down to a validated predictive subset explaining up to 20% of variance in cognitive outcomes</li>
           <li>Simulated large synthetic imaging/genetic datasets (n = 2,000) in R against known ground truth, validating classifier choice before committing scarce, expensive real clinical data to analysis</li>
           <li>Fine-tuned a MobileNetV2 transfer-learning model to predict learning disability from handwriting samples (AUC > 60%); benchmarked against tabular pipelines with class-imbalance correction</li>
           <li>Applied regression/tree models with empirical significance testing to small-sample EEG data, producing findings that held up statistically despite limited sample size</li>
