@@ -757,9 +757,11 @@
           theophylline and paraxanthine) prominent among the named hits. A four-component
           variance-partitioning framework decomposed how much of each metabolite's variance is
           uniquely attributable to the microbiome, cross-validated against an independent
-          SHAP-based sensitivity analysis. Also built a small literature-screening agent that
-          searches PubMed per significant target and uses an LLM to judge actual relevance,
-          adaptively broadening its query when initial results come back too thin.
+          SHAP-based sensitivity analysis. Also built and deployed an autonomous
+          literature-validation agent that screened 262 papers across all 41 targets against
+          three mechanistic evidence pillars (germ-free mouse, antibiotic perturbation, isotope
+          tracing), confirming microbial-origin evidence for 12 targets while deliberately
+          reserving citation-quality judgment for human review.
         </p>
         <div class="meta-row">
           <span class="meta-pill">Bootstrapped Stability Selection</span>
@@ -768,8 +770,8 @@
           <span class="meta-pill">HPC-Scale Model Training</span>
           <span class="meta-pill">Mediation Analysis</span>
           <span class="meta-pill">SHAP Feature Analysis</span>
-          <span class="meta-pill">LLM-Based Literature Screening</span>
-          <span class="meta-pill">Autonomous Query Refinement</span>
+          <span class="meta-pill">Autonomous Literature Validation</span>
+          <span class="meta-pill">Human-in-the-Loop Judgment Design</span>
         </div>
       </div>
 
