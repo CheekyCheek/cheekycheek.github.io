@@ -531,7 +531,7 @@
     <div class="proj-grid">
 
       <!-- 1 ── Brain-Imaging + Genetics -->
-      <div class="proj-card">
+      <div class="proj-card" id="proj-brain-imaging">
         <div class="tag-row">
           <span class="tag tag-neuro">Neuroimaging</span>
           <span class="tag tag-genetics">Genomics</span>
@@ -557,7 +557,7 @@
       </div>
 
       <!-- 2 ── Multimodal IQ -->
-      <div class="proj-card">
+      <div class="proj-card" id="proj-wisc-iq">
         <div class="tag-row">
           <span class="tag tag-neuro">Neuroimaging</span>
           <span class="tag tag-ml">Multimodal ML</span>
@@ -581,7 +581,7 @@
       </div>
 
       <!-- 3 ── EEG Institutionalization -->
-      <div class="proj-card">
+      <div class="proj-card" id="proj-eeg">
         <div class="tag-row">
           <span class="tag tag-eeg">EEG</span>
           <span class="tag tag-ml">Classification</span>
@@ -607,7 +607,7 @@
       </div>
 
       <!-- 4 ── Learning Disorders from Text -->
-      <div class="proj-card">
+      <div class="proj-card" id="proj-learning-disorders">
         <div class="tag-row">
           <span class="tag tag-nlp">NLP</span>
           <span class="tag tag-ml">Classification</span>
@@ -632,32 +632,7 @@
         </div>
       </div>
 
-      <!-- 5 ── PK/PD ODE -->
-      <div class="proj-card">
-        <div class="tag-row">
-          <span class="tag tag-pharma">Pharmacokinetics</span>
-          <span class="tag tag-ode">ODE Modeling</span>
-          <span class="tag tag-immuno">Circadian Biology</span>
-          <span class="tag tag-ml">Systems Biology</span>
-          <span class="tag tag-genetics">Computational Biology</span>
-        </div>
-        <h3>Circadian PK/PD Modeling for Gemcitabine in Pancreatic Cancer</h3>
-        <p class="proj-q">Does the time of chemotherapy administration matter — and can we model why?</p>
-        <p>
-          Formulated an ODE-based pharmacokinetic / pharmacodynamic model incorporating
-          circadian gene expression rhythms (DCK, CDA, NT5C2) to simulate how
-          biological time-of-day alters gemcitabine efficacy across 10 pancreatic
-          cancer cell lines. Reduced model structure identified the dominant regulatory axes.
-        </p>
-        <div class="meta-row">
-          <span class="meta-pill">Circadian Biology</span>
-          <span class="meta-pill">Model Reduction &amp; Sensitivity Analysis</span>
-          <span class="meta-pill">Cross-Cell-Line Simulation</span>
-          <span class="meta-pill">Dynamical Systems Parameter Estimation</span>
-        </div>
-      </div>
-
-      <!-- 6 ── Obesity + Inflammation -->
+      <!-- 5 ── Obesity + Inflammation -->
       <div class="proj-card" id="proj-obesity-inflammation">
         <div class="tag-row">
           <span class="tag tag-ml">Interpretable ML</span>
@@ -682,7 +657,7 @@
         </div>
       </div>
 
-      <!-- 7 ── Gut-Brain-Alcohol (RSA) -->
+      <!-- 6 ── Gut-Brain-Alcohol (RSA) -->
       <div class="proj-card" id="proj-rsa">
         <div class="tag-row">
           <span class="tag tag-microbiome">Microbiome</span>
@@ -711,7 +686,7 @@
         </div>
       </div>
 
-      <!-- 8 ── ApoE4 x Alcohol -->
+      <!-- 7 ── ApoE4 x Alcohol -->
       <div class="proj-card" id="proj-apoe4">
         <div class="tag-row">
           <span class="tag tag-genetics">Genomics</span>
@@ -736,7 +711,7 @@
         </div>
       </div>
 
-      <!-- 9 ── Gut Signals -->
+      <!-- 8 ── Gut Signals -->
       <div class="proj-card" id="proj-gut-signals">
         <div class="tag-row">
           <span class="tag tag-microbiome">Microbiome</span>
@@ -775,7 +750,7 @@
         </div>
       </div>
 
-      <!-- 10 ── Cohort Clock / CRI -->
+      <!-- 9 ── Cohort Clock / CRI -->
       <div class="proj-card" id="proj-cri">
         <div class="tag-row">
           <span class="tag tag-genetics">Transcriptomics</span>
@@ -804,6 +779,31 @@
         </div>
       </div>
 
+      <!-- 10 ── PK/PD ODE -->
+      <div class="proj-card" id="proj-gemcitabine">
+        <div class="tag-row">
+          <span class="tag tag-pharma">Pharmacokinetics</span>
+          <span class="tag tag-ode">ODE Modeling</span>
+          <span class="tag tag-immuno">Circadian Biology</span>
+          <span class="tag tag-ml">Systems Biology</span>
+          <span class="tag tag-genetics">Computational Biology</span>
+        </div>
+        <h3>Circadian PK/PD Modeling for Gemcitabine in Pancreatic Cancer</h3>
+        <p class="proj-q">Does the time of chemotherapy administration matter — and can we model why?</p>
+        <p>
+          Formulated an ODE-based pharmacokinetic / pharmacodynamic model incorporating
+          circadian gene expression rhythms (DCK, CDA, NT5C2) to simulate how
+          biological time-of-day alters gemcitabine efficacy across 10 pancreatic
+          cancer cell lines. Reduced model structure identified the dominant regulatory axes.
+        </p>
+        <div class="meta-row">
+          <span class="meta-pill">Circadian Biology</span>
+          <span class="meta-pill">Model Reduction &amp; Sensitivity Analysis</span>
+          <span class="meta-pill">Cross-Cell-Line Simulation</span>
+          <span class="meta-pill">Dynamical Systems Parameter Estimation</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -823,6 +823,7 @@
         <div class="pill-wrap">
           <span class="pill">Python</span>
           <span class="pill">R</span>
+          <span class="pill">SQL</span>
           <span class="pill">MATLAB</span>
           <span class="pill">Bash</span>
           <span class="pill">SLURM / HPC</span>
@@ -856,6 +857,18 @@
           <span class="pill">Elastic Net / Regularized Regression</span>
           <span class="pill">Random Forest</span>
           <span class="pill">Deep Learning</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <h3>AI &amp; LLM Systems</h3>
+        <div class="pill-wrap">
+          <span class="pill">LLM Agent Pipelines</span>
+          <span class="pill">Prompt Engineering</span>
+          <span class="pill">Agentic AI</span>
+          <span class="pill">Claude Code</span>
+          <span class="pill">Autonomous Literature Validation</span>
+          <span class="pill">Human-in-the-Loop Design</span>
         </div>
       </div>
 
