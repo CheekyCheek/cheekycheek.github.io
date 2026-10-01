@@ -735,7 +735,7 @@
           SHAP-based sensitivity analysis. Also built and deployed an autonomous
           literature-validation agent that screened 262 papers across all 41 targets against
           three mechanistic evidence pillars (germ-free mouse, antibiotic perturbation, isotope
-          tracing), confirming microbial-origin evidence for 12 targets while deliberately
+          tracing), surfacing candidate microbial-origin evidence for 12 targets while deliberately
           reserving citation-quality judgment for human review.
         </p>
         <div class="meta-row">
@@ -944,7 +944,7 @@
         <div class="exp-org">UTHealth Houston — Gastroenterology Research Center</div>
         <p class="exp-desc">Lead analyst across bioinformatics research lines spanning inflammation, gut microbiome, circadian biology, and biological aging, working independently across multiple clinical research groups.</p>
         <ul class="exp-ul">
-          <li>Applied unsupervised clustering to inflammatory cytokine data and surfaced a previously unrecognized "allergic obesity" patient subtype, invisible to BMI-based screening alone</li>
+          <li>Modeled inflammatory cytokine associations with BMI, metabolic markers, and allergy outcomes across two clinical cohorts using regression and ML pipelines (logistic regression, XGBoost + SHAP), and applied unsupervised clustering to test for distinct obesity phenotypes</li>
           <li>Constructed a multi-omics ML framework linking gut microbial features to circulating serum metabolites, using bootstrapped stability selection and cross-validated ElasticNet across a 12-covariate adjustment model at HPC scale to identify 41 FDR-significant metabolites</li>
           <li>Created a lightweight LLM-based literature-screening agent that searches PubMed for each significant biomarker and adaptively broadens its own query when initial results come back too thin, automating what had been a manual literature-triage step</li>
           <li>Formulated an ODE-based simulation model linking circadian biology to drug sensitivity across cancer cell lines from time-series RNA-seq data, giving collaborators a quantitative tool to prioritize treatment-timing hypotheses</li>
@@ -961,12 +961,12 @@
           <span class="exp-date">Feb 2024 – Sep 2025</span>
         </div>
         <div class="exp-org">University of Houston — GENES:IS Lab, TIMES</div>
-        <p class="exp-desc">Applied ML to multi-modal data (genetic, structural MRI, wearable biosensor) to model behavioral outcomes, independently owning research questions from data collection through peer-reviewed publication.</p>
+        <p class="exp-desc">Applied ML to multi-modal data (genetic, structural MRI, wearable biosensor) to model behavioral outcomes, independently owning research questions from data collection through analysis.</p>
         <ul class="exp-ul">
           <li>Built a multimodal ML pipeline combining white- and gray-matter neuroimaging features (PCA-reduced) to predict full-scale IQ in a large pediatric neuroimaging cohort, using nested model comparisons to test whether imaging data earns its cost over demographic-only prediction</li>
           <li>Benchmarked that model against polygenic risk scores from the PGS Catalog to quantify how much of IQ's known genetic signal the imaging model actually captures</li>
           <li>Mentored 9 graduate researchers on study design, statistical methodology, and ML implementation</li>
-          <li><strong>Project Director, ONR-funded study, "Individual Differences in Response to Stress"</strong> (Oct 2024 – 2025): owned data collection, processing, and analysis for a multi-day, multi-instrument stress-response study end-to-end</li>
+          <li><strong>Project Director, ONR-funded study, "Individual Differences in Response to Stress"</strong> (Oct 2024 – 2025): owned data collection, processing, storage, and analysis for a multi-day, multi-instrument stress-response study end-to-end</li>
           <li>Delivered the statistical backbone for a submitted NIH R21 grant and multiple manuscripts</li>
         </ul>
       </div>
@@ -978,7 +978,7 @@
         </div>
         <div class="exp-org">Texas Institute for Measurement, Evaluation, and Statistics (TIMES) — University of Houston</div>
         <ul class="exp-ul">
-          <li>Architected a lab-wide data-warehousing structure in collaboration with the IT team to consolidate 25+ years of unstructured, heterogeneous research data, then directed graduate students as they migrated their own data into it and reviewed each import for correctness; the structure is still the lab's standard years after handing it off</li>
+          <li>Warehoused 25+ years of unstructured, heterogeneous data from across projects into one consolidated source that new analyses could run against</li>
         </ul>
       </div>
 
